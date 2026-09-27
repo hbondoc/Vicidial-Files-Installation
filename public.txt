@@ -65,3 +65,14 @@
     <port port="443" protocol="tcp"/>
     <accept/>
   </rule>
+
+firewall-cmd --permanent --new-ipset=blackips --type=hash:net --option=family=inet --option=hashsize=1024 --option=maxelem=262144
+firewall-cmd --permanent --new-ipset=blacknets --type=hash:net --option=family=inet --option=hashsize=1024 --option=maxelem=65536
+firewall-cmd --permanent --new-ipset=dynamiclist --type=hash:net --option=family=inet --option=hashsize=1024 --option=maxelem=262144
+firewall-cmd --permanent --new-ipset=geoblock --type=hash:net --option=family=inet --option=hashsize=1024 --option=maxelem=65536
+firewall-cmd --permanent --new-ipset=voipblip --type=hash:net --option=family=inet --option=hashsize=1024 --option=maxelem=262144
+firewall-cmd --permanent --new-ipset=voipblnet --type=hash:net --option=family=inet --option=hashsize=1024 --option=maxelem=65536
+firewall-cmd --permanent --new-ipset=whiteips --type=hash:net --option=family=inet --option=hashsize=1024 --option=maxelem=262144
+firewall-cmd --permanent --new-ipset=whitenets --type=hash:net --option=family=inet --option=hashsize=1024 --option=maxelem=262144
+
+
