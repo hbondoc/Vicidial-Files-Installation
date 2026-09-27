@@ -1,0 +1,67 @@
+ <port port="9000-65355" protocol="udp"/>
+  <port port="8890" protocol="tcp"/>
+  <rule family="ipv4">
+    <source ipset="dynamiclist"/>
+    <service name="ssh"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="whitenets"/>
+    <service name="ssh"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="dynamiclist"/>
+    <service name="https"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="whiteips"/>
+    <service name="https"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="whiteips"/>
+    <service name="mysql"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="whitenets"/>
+    <service name="mysql"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="whitenets"/>
+    <service name="https"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="whitenets"/>
+    <port port="8089" protocol="tcp"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="whiteips"/>
+    <port port="8089" protocol="tcp"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="dynamiclist"/>
+    <service name="http"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="dynamiclist"/>
+    <port port="8089" protocol="tcp"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="dynamiclist"/>
+    <port port="5060" protocol="udp"/>
+    <accept/>
+  </rule>
+  <rule family="ipv4">
+    <source ipset="dynamiclist"/>
+    <port port="443" protocol="tcp"/>
+    <accept/>
+  </rule>
